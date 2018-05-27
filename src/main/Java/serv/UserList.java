@@ -26,16 +26,22 @@ public class UserList extends HttpServlet {
         session.beginTransaction();
         Query<User> query = session.createQuery("from User");
         List<User> list = query.list();
-        pw.println("    <div class=\"row\">\n" +
+        pw.println("<head>\n" +
+                "       <link href=\"css/bootstrap.css\" rel=\"stylesheet\">\n" +
+                "       <title>All users</title>" +
+                "    </head>");
+        pw.println("<div class=\"row \">\n" +
                 "        <div class=\"col-3\">\n" +
                 "            <h2>Users list</h2>\n" +
                 "        </div>\n" +
                 "    </div>");
         User user = new User();
+        pw.println("<table class=\"table table-bordered>\"");
         for (int i=0; i<list.size();i++){
-            pw.println(list.get(i)+"</br>");
+            pw.println(list.get(i));
         }
-
+        pw.println("</table>");
+        pw.println("<button style=\"margin-left: 15px\"><a href=\"index.jsp\">Go to homepage</a></button>");
 
     }
 }

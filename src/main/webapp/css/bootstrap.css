@@ -1517,6 +1517,8 @@ pre code {
   width: 100%;
   max-width: 100%;
   margin-bottom: 1rem;
+  margin-left: 15px;
+  margin-right: 15px;
   background-color: transparent;
 }
 

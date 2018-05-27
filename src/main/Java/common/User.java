@@ -43,9 +43,9 @@ public class User {
 
     @Override
     public String toString() {
-        return "User\t" +
-                "\tid=" + id +
-                "\t\tuser_name='" + user_name + '\'' +
-                "\t\tpass='" + pass + '\'';
+        return "<tr><td>User</td>" +
+                "<td>id=" + id +
+                "</td><td>user_name='" + user_name + '\'' +
+                "</td><td>pass='" + pass + '\''+"</td></tr>";
     }
 }
