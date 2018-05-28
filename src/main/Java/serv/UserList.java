@@ -20,6 +20,7 @@ public class UserList extends HttpServlet {
 
 
     public void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
+
         resp.setContentType("text/html;charset=utf-8");
         PrintWriter pw = resp.getWriter();
         Session session = getSession();
@@ -41,7 +42,6 @@ public class UserList extends HttpServlet {
             pw.println(list.get(i));
         }
         pw.println("</table>");
-        pw.println("<button style=\"margin-left: 15px\"><a href=\"index.jsp\">Go to homepage</a></button>");
-
+        pw.println("<a class=\"btn btn-primary btn-large\" href=\"index.jsp\">Go to homepage</a>");
     }
 }
